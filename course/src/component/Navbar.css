@@ -1,0 +1,24 @@
+/* Styling for the main div surrounding the nav */
+/* Assuming the overall page background is dark */
+.navbar-container {
+    background-color: #171717; /* Dark background color (adjust as needed) */
+    padding: 20px 0; /* Add top and bottom padding */
+    width: 100%;
+    /* You may want to define a specific max-width for the content inside */
+}
+
+/* Styling for the nav element itself */
+nav {
+    max-width: 1200px; /* Example width for content centering */
+    margin: 0 auto; /* Center the nav horizontally */
+    padding: 0 20px; /* Side padding inside the container */
+}
+
+/* Styling for the "Top courses" heading */
+nav h1 {
+    color: #ffffff; /* White text color */
+    font-size: 2.5rem; /* Large, prominent font size */
+    font-weight: 600; /* Semi-bold */
+    margin: 0; /* Remove default margin */
+    text-align: left; /* Align to the left */
+}

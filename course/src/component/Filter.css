@@ -1,0 +1,41 @@
+/* Container for all filter buttons */
+.filter-container {
+    display: flex; /* Arrange buttons horizontally */
+    gap: 10px; /* Space between buttons */
+    max-width: fit-content; /* Only take up the space needed by the buttons */
+    margin: 20px 0; /* Vertical margin above and below the tabs */
+    padding: 5px; /* Padding inside the light grey background */
+    background-color: #333333; /* Darker grey background for the tab selector area */
+    border-radius: 8px; /* Rounded corners for the container */
+}
+
+/* Base style for all filter buttons */
+.filter-button {
+    background-color: transparent; /* Default is transparent */
+    color: #ffffff; /* White text */
+    border: none; /* No border */
+    padding: 8px 20px; /* Padding inside the button */
+    border-radius: 6px; /* Slightly rounded corners for buttons */
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s; /* Smooth transitions */
+    
+    /* Make buttons visually distinctive when not selected */
+    opacity: 0.7; 
+}
+
+/* Hover effect */
+.filter-button:hover {
+    opacity: 1; /* Increase opacity on hover */
+    background-color: #444444; /* Slightly lighter background on hover */
+}
+
+/* Style for the currently active/selected filter button */
+.filter-button.active {
+    background-color: #ffffff; /* White background for the active tab */
+    color: #171717; /* Dark text for the active tab */
+    font-weight: 600; /* Bolder for the active tab */
+    opacity: 1; /* Full opacity */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for lift */
+}

@@ -1,15 +1,18 @@
 import React from 'react'
+import'./Filter.css'
 
- const Filter = ({filterData}) => {
+ const Filter = (props) => {
+  let filterdata = props.filterData;
   return (
-    <div>
-        {filterData.map((data) =>{
-        <button>
-        {data.id}
+    <div className="filter-container">
+        {
+        filterdata.map((data) =>(
+        <button 
+        key = {data.id}>
         {data.title}
         </button>
          
-        })}
+        ))}
         </div>
     
 
