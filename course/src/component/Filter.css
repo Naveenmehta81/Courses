@@ -3,21 +3,23 @@
     display: flex; /* Arrange buttons horizontally */
     gap: 10px; /* Space between buttons */
     max-width: fit-content; /* Only take up the space needed by the buttons */
-    margin: 20px 0; /* Vertical margin above and below the tabs */
+    margin: 20px auto; /* Vertical margin above and below the tabs */
     padding: 5px; /* Padding inside the light grey background */
     background-color: #333333; /* Darker grey background for the tab selector area */
     border-radius: 8px; /* Rounded corners for the container */
+    justify-content: center;
 }
 
 /* Base style for all filter buttons */
 .filter-button {
-    background-color: transparent; /* Default is transparent */
+    background-color:rgb(25, 19, 19); /* Default is transparent */
     color: #ffffff; /* White text */
     border: none; /* No border */
     padding: 8px 20px; /* Padding inside the button */
     border-radius: 6px; /* Slightly rounded corners for buttons */
     font-size: 1rem;
     font-weight: 500;
+    text-align: center;
     cursor: pointer;
     transition: background-color 0.2s, color 0.2s; /* Smooth transitions */
     

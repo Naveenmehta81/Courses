@@ -1,0 +1,27 @@
+/* Container for all course cards */
+.cards-container {
+    /* Enable a Grid layout */
+    display: grid;
+    
+    /* Create three equally sized columns */
+    /* The screenshot shows 3 cards per row */
+    grid-template-columns: repeat(3, 1fr); 
+    
+    /* Set the gap/spacing between the cards */
+    gap: 30px; 
+    
+    /* Ensure the grid is centered within its parent */
+    max-width: 1200px; /* Adjust this to match your overall content width */
+    margin: 0 auto; 
+    
+    /* Add top padding to separate from the filter section */
+    padding: 30px 20px; 
+    
+    /* Responsive adjustment for smaller screens */
+    /* @media (max-width: 1024px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: 600px) {
+        grid-template-columns: 1fr;
+    } */
+}

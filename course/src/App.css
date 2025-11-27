@@ -1,42 +1,41 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  
+
+
+
+
+
+/* Styling for the entire application root */
+#root, .App { 
+    /* Assuming your root element or a wrapper div uses the App class */
+   
+    min-height: 100vh; /* Ensure the background covers the entire viewport height */
+    width: 100%;
+    background-color: #1a1a1a; /* Very dark background color for the overall page */
+    color: #ffffff; /* Default white text color for the whole application */
+    font-family: Arial, sans-serif; /* Basic clean font */
+    display: flex;
+    flex-direction: column; /* Stack components vertically */
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* 1. Global Wrapper for Content */
+/* This class will be applied to the div wrapping the Filter component and the Cards component */
+.main-content-wrapper {
+    max-width: 1200px; /* Limits the overall width of content (matching Navbar/Cards container) */
+    width: 95%; /* Ensures it scales on smaller screens */
+    margin: 0 auto; /* Centers the content wrapper */
+    padding-bottom: 50px; /* Add some space at the bottom of the page */
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* 2. Style for the container around Filter */
+/* Helps align the filter bar correctly */
+.filter-container-wrapper {
+    margin-top: 20px; /* Space below the Navbar */
+    display: flex;
+    justify-content: flex-start; /* Align filter content to the left */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+/* 3. Style for the container around Cards/Spinner */
+.cards-loading-wrapper {
+    flex-grow: 1; /* Allows this section to take up available vertical space */
+    padding: 20px 0;
 }

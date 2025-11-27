@@ -13,6 +13,7 @@ function App() {
 
   const [courses, setCourses] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [category , setcategory] = useState(filterData[0].title);
 
   async function fetchdata() {
     setLoading(true);
@@ -37,17 +38,23 @@ function App() {
 
 
   return (
-    <>
+    < >
+    <div className="App">
       <div>
         <Navbar />
       </div>
-      <div>
-        <Filter filterData={filterData} />     {/* i get filter data from data and then pass through props  */}
+      <div className="main-content-wrapper">
+        <div className="filter-container-wrapper">
+        <Filter filterData={filterData}
+        category={category}
+        setcategory = {setcategory} />     {/* i get filter data from data and then pass through props  */}
       </div>
-      <div>
-        {loading ? (<Spinner />) : (<Cards  courses={courses}/>) } 
+      <div className="cards-loading-wrapper">
+        {loading ? (<Spinner />) : (<Cards  courses={courses} category={category}/>) } 
       </div>
-
+    </div>
+      </div>
+      
     </>
   );
 }

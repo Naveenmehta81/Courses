@@ -1,0 +1,90 @@
+/* 1. Main Card Container */
+.card {
+    /* Define the card's appearance */
+    background-color: #2a2a2a; /* Dark background color for the card */
+    border-radius: 10px; /* Rounded corners */
+    overflow: hidden; /* Ensures the image respects the border-radius */
+    position: relative; /* Needed to position the 'like' button absolutely */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); /* Subtle shadow for depth */
+    transition: transform 0.3s ease; /* Hover animation */
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Lift the card slightly on hover */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5); 
+}
+
+/* 2. Image and Like Button Wrapper */
+.card-image-container {
+    position: relative; /* Acts as the parent for absolute positioning of the button */
+    height: 180px; /* Fixed height for consistency */
+}
+
+.card-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+    display: block;
+}
+
+/* 3. Like Button */
+.card-image-container button {
+    position: absolute;
+    top: 10px; /* Distance from the top */
+    right: 10px; /* Distance from the right */
+    background-color: #ffffff; /* White background for visibility */
+    border-radius: 50%; /* Makes the button round */
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(223, 217, 217, 0.144);
+     z-index: 10;  /* Ensure it stays above the image */
+}
+
+
+/* 4. Content Area (Title and Description) */
+.card-info-container {
+    padding: 15px 20px 25px 20px; /* Generous padding */
+}
+
+/* 5. Title */
+.card-info-container p:first-child { /* Targets the title paragraph */
+    color: #ffffff; /* White text */
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+/* 6. Description */
+.card-info-container p:last-child { /* Targets the description paragraph */
+    color: #b0b0b0; /* Light grey text for better readability */
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin: 0;
+    /* Limit the description to a few lines */
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Show max 3 lines */
+    -webkit-box-orient: vertical;
+}
+
+/* 7. LIVE Label (Optional, but seen in screenshot) */
+/* You would need to add an element for this in your React code */
+.live-label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #ffc107; /* Yellow background */
+    color: #171717; /* Dark text */
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    z-index: 10;
+}
