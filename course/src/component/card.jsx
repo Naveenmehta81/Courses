@@ -17,7 +17,7 @@ import { toast } from 'react-toastify';
       if(likecourses.includes(course.id)){
         // phel se like hai 
         setlikecourses((prev) =>  prev.filter((cid) =>(cid !== course.id)));
-        toast.warning("you unlike ");
+        toast.warning("you unlike the");
       }
       else{
           // not liked 
@@ -49,17 +49,10 @@ import { toast } from 'react-toastify';
 
          <div className="card-info-container">
           <p>{course.title}</p>
-<p>
-  {
-  course.description
-  }
 
+          <p>{course.description}</p>
 
-
-</p>
-
-</div>
-        </div>
+           </div> </div>
   )
 }
 
